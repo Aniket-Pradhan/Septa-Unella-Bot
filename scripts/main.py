@@ -66,6 +66,7 @@ class main:
                 comments = self.get_comments(mod)
                 for comment in comments:
                     subreddit = comment.subreddit
+                    comment.reply('SHAME!! 🔔')
                     if comment.id not in self.log_comments[mod] and subreddit.display_name == 'freefolk':
                         try:
                             comment.reply('SHAME!! 🔔')
