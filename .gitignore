@@ -1,0 +1,7 @@
+.venv/
+.vscode/
+scripts/__pycache__/
+secrets.yaml
+mod_list.yaml
+
+log_comments
