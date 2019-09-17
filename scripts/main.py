@@ -60,13 +60,15 @@ class main:
         
         while(True):
             for mod in self.mod_list:
+                if self.log_comments.get(mod) == None:
+                    self.log_comments[mod] = []
                 print("shaming mod " + str(mod))
                 comments = self.get_comments(mod)
                 for comment in comments:
                     # print(comment.body)
                     if comment.id not in self.log_comments[mod]:
                         try:
-                            comment.reply('Just trying out a bot. :D')
+                            comment.reply('SHAME!! 🔔')
                             self.log_comments[mod].append(comment.id)
                             print('shamed')
                         except:
